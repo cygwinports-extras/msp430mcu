@@ -1,0 +1,5 @@
+category: Devel
+requires: 
+sdesc: "MCU headers and ldscripts for MSP430 embedded toolchain"
+ldesc: "This package provides a basic C library for the Texas Instruments
+MSP430 family of MCUs."
