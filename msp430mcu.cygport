@@ -1,0 +1,22 @@
+TOOLCHAIN_TARGET="msp430"
+inherit toolchain
+
+NAME="msp430mcu"
+VERSION=20120606
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="MCU headers and ldscripts for MSP430 embedded toolchain"
+DESCRIPTION="This package provides a basic C library for the Texas Instruments
+MSP430 family of MCUs."
+HOMEPAGE="http://mspgcc.sourceforge.net/"
+SRC_URI="mirror://sourceforge/mspgcc/${NAME}-${VERSION}.tar.bz2"
+
+src_compile() { :; }
+
+src_install() {
+	cd ${S}
+	dodir /usr/bin
+	MSP430MCU_ROOT=${S} \
+	scripts/install.sh ${D}/usr
+	sed -i -e "s|${D}||g" ${D}/usr/bin/${NAME}-config
+}
