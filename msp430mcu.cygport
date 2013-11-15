@@ -2,7 +2,7 @@ TOOLCHAIN_TARGET="msp430"
 inherit toolchain
 
 NAME="msp430mcu"
-VERSION=20120606
+VERSION=20120406
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="MCU headers and ldscripts for MSP430 embedded toolchain"
